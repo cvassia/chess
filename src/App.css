@@ -117,3 +117,17 @@
   position: relative;
   top: 3px;
 }
+
+.undo-text,
+.reset-text {
+  color: white;
+  position: absolute;
+  bottom: 179px;
+  left: 150px;
+  width: 10px;
+  font-weight: 800;
+}
+
+.reset-text {
+  bottom: 71px;
+}

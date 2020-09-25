@@ -31,12 +31,18 @@ function App() {
       )}
       <div className="board-container">
         <Board board={board} />
-        <button className="undo-button" onClick={undoMove}>
-          <img className="undo-icon" src={undoIcon} alt="undo game" />
-        </button>
-        <button className="reset-button" onClick={resetGame}>
-          <img className="reset-icon" src={resetIcon} alt="undo move" />
-        </button>
+        <div>
+          <button className="undo-button" onClick={undoMove}>
+            <img className="undo-icon" src={undoIcon} alt="undo game" />
+          </button>
+          <p className="undo-text">undo move</p>
+        </div>
+        <div>
+          <button className="reset-button" onClick={resetGame}>
+            <img className="reset-icon" src={resetIcon} alt="undo move" />
+          </button>
+          <p className="reset-text">reset game</p>
+        </div>
       </div>
       {result && <h2 className="vertical-text">{result}</h2>}
     </div>
