@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #34748b;
+  background-color: #438ba4;
 }
 
 .board-container {
@@ -77,9 +77,12 @@
 .vertical-text button {
   margin: 20px 0;
   cursor: pointer;
-  background-color: #244f5f;
   border-radius: 10px;
   outline: none;
+  border: none;
+  border-radius: 17px;
+  background: #438ba4;
+  box-shadow: inset 5px 5px 10px #306476, inset -5px -5px 10px #56b2d2;
 }
 
 .vertical-text span {
@@ -91,12 +94,20 @@
 
 .reset-button {
   position: absolute;
-  bottom: 5em;
-  left: 10em;
+  bottom: 4em;
+  left: 5em;
   cursor: pointer;
-  background-color: #244f5f;
-  border-radius: 40px;
   outline: none;
   padding: 16px;
   color: white;
+  border: none;
+  border-radius: 50%;
+  background: #438ba4;
+  box-shadow: 6px 6px 20px #316578, -6px -6px 20px #55b1d0;
+}
+
+.reset-icon {
+  width: 37px;
+  position: relative;
+  top: 3px;
 }

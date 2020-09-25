@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import { gameSubject, initGame, resetGame } from "./Game";
 import Board from "./Board";
+import resetIcon from "./assets/reset-icon.png";
 
 function App() {
   const [board, setBoard] = useState([]);
@@ -30,7 +31,7 @@ function App() {
       <div className="board-container">
         <Board board={board} />
         <button className="reset-button" onClick={resetGame}>
-          <span>reset</span>
+          <img className="reset-icon" src={resetIcon} alt="reset game" />
         </button>
       </div>
       {result && <h2 className="vertical-text">{result}</h2>}
