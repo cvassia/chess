@@ -47,4 +47,21 @@ function updateGame(pendingPromotion) {
   gameSubject.next(newGame);
 }
 
-function getGameResult() {}
+function getGameResult() {
+  if (chess.in_checkmate()) {
+    const winner = chess.turn() === "w" ? "black" : "white";
+    return `Checkmate - winner - ${winner}`;
+  } else if (chess.in_draw()) {
+    let reason = "50 - moves - rule";
+    if (chess.in_stalemate()) {
+      reason = "Stalemate";
+    } else if (chess.in_threefold_repetition()) {
+      reason = "Repetition";
+    } else if (chess.insufficient_material()) {
+      reason = "insufficient material";
+    }
+    return `Draw - ${reason}`;
+  } else {
+    return "unknown reason";
+  }
+}
