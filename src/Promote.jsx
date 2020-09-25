@@ -9,7 +9,7 @@ export default function Promote({ promotion: { from, to, color } }) {
           <div className="piece-container" onClick={() => move(from, to, p)}>
             <img
               className="piece toChoose"
-              src={require(`../assets/${p}_${color}.png`)}
+              src={require(`./assets/${p}_${color}.png`)}
               alt="four pieces to choose"
             />
           </div>

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { gameSubject, initGame, resetGame } from "./Game";
+import { gameSubject, initGame, resetGame, undoMove } from "./Game";
 import Board from "./Board";
 import resetIcon from "./assets/reset-icon.png";
+import undoIcon from "./assets/undo-icon.png";
 
 function App() {
   const [board, setBoard] = useState([]);
@@ -30,8 +31,11 @@ function App() {
       )}
       <div className="board-container">
         <Board board={board} />
+        <button className="undo-button" onClick={undoMove}>
+          <img className="undo-icon" src={undoIcon} alt="undo game" />
+        </button>
         <button className="reset-button" onClick={resetGame}>
-          <img className="reset-icon" src={resetIcon} alt="reset game" />
+          <img className="reset-icon" src={resetIcon} alt="undo move" />
         </button>
       </div>
       {result && <h2 className="vertical-text">{result}</h2>}

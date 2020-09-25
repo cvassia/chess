@@ -45,6 +45,11 @@ export function move(from, to, promotion) {
   }
 }
 
+export function undoMove() {
+  chess.undo();
+  updateGame();
+}
+
 function updateGame(pendingPromotion) {
   const isGameOver = chess.game_over();
   const newGame = {

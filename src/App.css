@@ -30,11 +30,11 @@
 }
 
 .square-black {
-  background-image: url(back-black.png);
+  background-image: url(./assets/back-black.png);
 }
 
 .square-white {
-  background-image: url(back-white.png);
+  background-image: url(./assets/back-white.png);
 }
 
 .board-square {
@@ -92,7 +92,8 @@
   font-weight: 600;
 }
 
-.reset-button {
+.reset-button,
+.undo-button {
   position: absolute;
   bottom: 4em;
   left: 5em;
@@ -106,7 +107,12 @@
   box-shadow: 6px 6px 20px #316578, -6px -6px 20px #55b1d0;
 }
 
-.reset-icon {
+.undo-button {
+  bottom: 12em;
+}
+
+.reset-icon,
+.undo-icon {
   width: 37px;
   position: relative;
   top: 3px;
