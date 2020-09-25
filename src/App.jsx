@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { gameSubject, initGame, resetGame, undoMove } from "./Game";
-import Board from "./Board";
+import { gameSubject, initGame, resetGame, undoMove } from "./components/Game";
+import Board from "./components/Board";
 import resetIcon from "./assets/reset-icon.png";
 import undoIcon from "./assets/undo-icon.png";
 
