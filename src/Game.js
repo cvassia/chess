@@ -23,18 +23,28 @@ export function handleMove(from, to) {
   }
 }
 
-export function move(from, to) {
-  const legalMove = chess.move({ from, to });
+export function move(from, to, promotion) {
+  let tempMove = { from, to };
+  if (promotion) {
+    tempMove.promotion = promotion;
+  }
+
+  const legalMove = chess.move(tempMove);
   if (legalMove) {
     updateGame();
   }
 }
 
 function updateGame(pendingPromotion) {
+  const isGameOver = chess.game_over();
   const newGame = {
     board: chess.board(),
     pendingPromotion,
+    isGameOver,
+    result: isGameOver ? getGameResult() : null,
   };
 
   gameSubject.next(newGame);
 }
+
+function getGameResult() {}
