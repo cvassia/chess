@@ -64,3 +64,27 @@
 .toChoose {
   cursor: pointer;
 }
+
+.vertical-text {
+  margin: 0 20px;
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  font-family: sans-serif;
+  padding: 10px;
+  color: white;
+}
+
+.vertical-text button {
+  margin: 20px 0;
+  cursor: pointer;
+  background-color: #244f5f;
+  border-radius: 10px;
+  outline: none;
+}
+
+.vertical-text span {
+  margin: 0;
+  padding: 20px;
+  font-size: 15px;
+  font-weight: 600;
+}

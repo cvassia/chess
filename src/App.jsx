@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { gameSubject, initGame } from "./Game";
+import { gameSubject, initGame, resetGame } from "./Game";
 import Board from "./Board";
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
       {isGameOver && (
         <h2 className="vertical-text">
           Game Over
-          <button>
+          <button onClick={resetGame}>
             <span className="vertical-text">New Game</span>
           </button>
         </h2>
@@ -30,6 +30,7 @@ function App() {
       <div className="board-container">
         <Board board={board} />
       </div>
+      {result && <h2 className="vertical-text">{result}</h2>}
     </div>
   );
 }
