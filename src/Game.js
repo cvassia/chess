@@ -9,6 +9,10 @@ const chess = new Chess();
 export const gameSubject = new BehaviorSubject();
 
 export function initGame() {
+  const savedGame = localStorage.getItem("savedGame");
+  if (savedGame) {
+    chess.load(savedGame);
+  }
   updateGame();
 }
 
@@ -49,6 +53,8 @@ function updateGame(pendingPromotion) {
     isGameOver,
     result: isGameOver ? getGameResult() : null,
   };
+
+  localStorage.setItem("savedGame", chess.fen());
 
   gameSubject.next(newGame);
 }
