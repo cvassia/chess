@@ -29,6 +29,9 @@ function App() {
       )}
       <div className="board-container">
         <Board board={board} />
+        <button className="reset-button" onClick={resetGame}>
+          <span>reset</span>
+        </button>
       </div>
       {result && <h2 className="vertical-text">{result}</h2>}
     </div>

@@ -88,3 +88,15 @@
   font-size: 15px;
   font-weight: 600;
 }
+
+.reset-button {
+  position: absolute;
+  bottom: 5em;
+  left: 10em;
+  cursor: pointer;
+  background-color: #244f5f;
+  border-radius: 40px;
+  outline: none;
+  padding: 16px;
+  color: white;
+}
